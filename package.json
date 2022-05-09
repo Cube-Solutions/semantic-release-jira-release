@@ -1,0 +1,32 @@
+{
+  "name": "semantic-release-jira-release",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "",
+  "license": "ISC",
+  "ava": {
+    "files": [
+      "test/**/*.test.js"
+    ]
+  },
+  "dependencies": {
+    "aggregate-error": "^3.0.0",
+    "debug": "^4.0.0",
+    "jira-client": "^8.1.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "ava": "^4.1.0",
+    "clear-module": "4.1.2",
+    "nock": "13.2.4",
+    "nyc": "15.1.0",
+    "semantic-release": "19.0.2",
+    "sinon": "13.0.1",
+    "tempy": "1.0.1",
+    "xo": "0.28.3"
+  }
+}
