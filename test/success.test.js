@@ -28,7 +28,6 @@ test.serial('Creates JIRA release', async t => {
     JIRA_PASSWORD: jiraPassword,
   };
   const nextRelease = {version: '1.0.1'};
-  const releases = {name: "Release name", url: "http://google.com"};
   const commits = [
     {short:  "123456", message: "fix: ML-1581 This is a test"},
     {short:  "789876", message: "fix: ML-1582 This is also a test"},
@@ -38,7 +37,8 @@ test.serial('Creates JIRA release', async t => {
     success({
       jiraProjects: jiraProjects,
       releaseNameTemplate: 'Unit ${version}',
-      releaseDescriptionTemplate: 'Full release notes are available at: ${url}',
-    }, {env, commits, nextRelease, releases, logger: t.context.logger})
+      releaseDescriptionTemplate: 'Full release notes are available at: ${releaseUrl}',
+      releaseUrlTemplate: 'https://github.com/test/test/releases/${version}',
+    }, {env, commits, nextRelease, logger: t.context.logger})
   );
 });
